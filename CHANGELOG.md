@@ -3,7 +3,24 @@
 Notes for players and for anyone who maintains this mod later. Each entry says what changed, why,
 and where in the code to look.
 
-## Unreleased (0.0.9 internal beta)
+## 0.5 — initial public release (Nov 2026)
+
+First public build, after nine internal betas tested in game by the author (0.0.1–0.0.9).
+
+### Changed for release
+- **Debug log off by default** (`OSEvoConfig.debugLog`). It was on through the betas so every test left
+  a trail. To report a bug: turn it on in Mod Settings, reproduce, send
+  `bin\x64\plugins\cyber_engine_tweaks\gamelog.log`.
+- **No "loaded" message on screen** (`OSEvoSystem`, after `QueueTick`). The beta proof-of-life popup now only
+  goes to the debug log, so the mod doesn't announce itself on every load.
+- Version 0.5 (`OSEvoSystem.Version`), README status.
+
+### Known limits
+- 11 perk clauses are marked `later` in the CSV (they need TweakXL or hooks not found yet). Their tooltip
+  line says "coming in a later build"; they do nothing yet. Every other perk works.
+- Text is English only for now.
+
+## 0.0.9 internal beta
 
 ### Confirmed in game: Berserk duration bonus works
 - 0.0.8 test (author, Nov 19): with the Zetatech Berserk titled (+3 s), every run from full charge took

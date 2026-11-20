@@ -137,9 +137,9 @@ public class OSEvoConfig {
   // 0.0.9: the text pointed testers at the redscript log, but ModLog writes to Cyber Engine Tweaks'
   // game log (seen in the author's settings screenshot, Nov 19). Text only, no behaviour change.
   @runtimeProperty("ModSettings.description", "Write what the mod counts and applies to the game log (bin/x64/plugins/cyber_engine_tweaks/gamelog.log, search ChromepunkOSEvo). For testers.")
-  // BETA: on by default (since 0.0.3) so every test run leaves a trail in the log without the tester
-  // having to remember the setting. Switch the default back to false for the 0.5 release.
-  public let debugLog: Bool = true;
+  // 0.5: off by default for the public release (it was on from 0.0.3 so every beta test left a trail).
+  // Players reporting a bug turn it on in Mod Settings and send gamelog.log.
+  public let debugLog: Bool = false;
 }
 
 // Mod Settings is optional: one of these two versions is picked at compile time.

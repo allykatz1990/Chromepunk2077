@@ -128,10 +128,10 @@ public class OSEvoSystem extends ScriptableSystem {
   private let m_lastLandingTime: Float;
   private let m_stageNotice: String;           // set when a stage unlocks, shown on the next card
   private let m_cardToken: Int32;              // the OS card's hide timer only removes its own card
-  private let m_announced: Bool;               // beta: "loaded" message shown once per session
+  private let m_announced: Bool;               // "loaded" line written once per session (debug log only since 0.5)
 
   public static func Version() -> String {
-    return "0.0.9";
+    return "0.5";
   }
 
   public func NextCardToken() -> Int32 {
@@ -425,12 +425,12 @@ public class OSEvoSystem extends ScriptableSystem {
     this.m_tickRunning = true;
     this.m_lastTickReal = this.Now();
     this.QueueTick();
-    // BETA ONLY (0.0.2): proves at a glance that the mod is loaded and its tick started. 0.0.1 testing
-    // showed no feedback at all, and without this there is no way to tell "not running" from "not
-    // counted yet". Remove before the 0.5 public release.
+    // 0.5: the beta "<mod> <version> loaded" on-screen message (0.0.2, proof the tick started) is gone
+    // for the public release. The debug log still records the start; the hidden system should not
+    // announce the mod on every load.
     if !this.m_announced {
       this.m_announced = true;
-      this.Notify("Chromepunk 2077: OS Evolution " + OSEvoSystem.Version() + " loaded");
+      this.Log("Chromepunk 2077: OS Evolution " + OSEvoSystem.Version() + " loaded");
     }
   }
 

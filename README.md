@@ -6,7 +6,7 @@
 
 A progression mod for Cyberpunk 2077 2.x with Phantom Liberty: cyberdecks, Sandevistans and Berserks level up as you use them, and the sixteen Tier 5++ models evolve through three stages with titles and perks of their own. A companion to [Weaponpunk 2077](https://github.com/allykatz1990/Weaponpunk2077).
 
-**Status: public beta, v0.5 (initial release).** Back up your saves.
+**Status: public beta, v0.5 (initial release).** Back up your saves. Download: [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/39067).
 
 ## Features
 
